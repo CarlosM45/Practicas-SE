@@ -1,0 +1,3 @@
+hola|Hola, cómo estás?
+bien y tu|Bien, gracias
+cual es tu color favorito|Rojo, claramente ;)

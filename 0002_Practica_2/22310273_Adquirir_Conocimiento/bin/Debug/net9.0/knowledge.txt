@@ -1,3 +1,5 @@
 hola|Hola, cómo estás?
 bien y tu|Bien, gracias
 cual es tu color favorito|Rojo, claramente ;)
+hi|sup
+salir|Por favor usa interrupción de teclado

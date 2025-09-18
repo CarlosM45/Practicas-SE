@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Carlos\\Desktop\\El inge\\7mo\\SE\\Practicas-SE\\0002_Practica_2\\Chatbot\\Chatbot.csproj",
-      "projectName": "Chatbot",
-      "projectPath": "C:\\Users\\Carlos\\Desktop\\El inge\\7mo\\SE\\Practicas-SE\\0002_Practica_2\\Chatbot\\Chatbot.csproj",
+      "projectUniqueName": "C:\\Users\\Carlos\\Desktop\\El inge\\7mo\\SE\\Practicas-SE\\0002_Practica_2\\22310273_Adquirir_Conocimiento\\22310273_Adquirir_Conocimiento.csproj",
+      "projectName": "22310273_Adquirir_Conocimiento",
+      "projectPath": "C:\\Users\\Carlos\\Desktop\\El inge\\7mo\\SE\\Practicas-SE\\0002_Practica_2\\22310273_Adquirir_Conocimiento\\22310273_Adquirir_Conocimiento.csproj",
       "packagesPath": "C:\\Users\\Carlos\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Carlos\\Desktop\\El inge\\7mo\\SE\\Practicas-SE\\0002_Practica_2\\Chatbot\\obj\\",
+      "outputPath": "C:\\Users\\Carlos\\Desktop\\El inge\\7mo\\SE\\Practicas-SE\\0002_Practica_2\\22310273_Adquirir_Conocimiento\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Carlos\\AppData\\Roaming\\NuGet\\NuGet.Config"

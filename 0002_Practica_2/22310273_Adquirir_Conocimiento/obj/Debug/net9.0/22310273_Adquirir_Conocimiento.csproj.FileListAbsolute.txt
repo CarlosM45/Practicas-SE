@@ -1,0 +1,15 @@
+C:\Users\Carlos\Desktop\El inge\7mo\SE\Practicas-SE\0002_Practica_2\22310273_Adquirir_Conocimiento\bin\Debug\net9.0\22310273_Adquirir_Conocimiento.exe
+C:\Users\Carlos\Desktop\El inge\7mo\SE\Practicas-SE\0002_Practica_2\22310273_Adquirir_Conocimiento\bin\Debug\net9.0\22310273_Adquirir_Conocimiento.deps.json
+C:\Users\Carlos\Desktop\El inge\7mo\SE\Practicas-SE\0002_Practica_2\22310273_Adquirir_Conocimiento\bin\Debug\net9.0\22310273_Adquirir_Conocimiento.runtimeconfig.json
+C:\Users\Carlos\Desktop\El inge\7mo\SE\Practicas-SE\0002_Practica_2\22310273_Adquirir_Conocimiento\bin\Debug\net9.0\22310273_Adquirir_Conocimiento.dll
+C:\Users\Carlos\Desktop\El inge\7mo\SE\Practicas-SE\0002_Practica_2\22310273_Adquirir_Conocimiento\bin\Debug\net9.0\22310273_Adquirir_Conocimiento.pdb
+C:\Users\Carlos\Desktop\El inge\7mo\SE\Practicas-SE\0002_Practica_2\22310273_Adquirir_Conocimiento\obj\Debug\net9.0\22310273_Adquirir_Conocimiento.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Carlos\Desktop\El inge\7mo\SE\Practicas-SE\0002_Practica_2\22310273_Adquirir_Conocimiento\obj\Debug\net9.0\22310273_Adquirir_Conocimiento.AssemblyInfoInputs.cache
+C:\Users\Carlos\Desktop\El inge\7mo\SE\Practicas-SE\0002_Practica_2\22310273_Adquirir_Conocimiento\obj\Debug\net9.0\22310273_Adquirir_Conocimiento.AssemblyInfo.cs
+C:\Users\Carlos\Desktop\El inge\7mo\SE\Practicas-SE\0002_Practica_2\22310273_Adquirir_Conocimiento\obj\Debug\net9.0\22310273_Adquirir_Conocimiento.csproj.CoreCompileInputs.cache
+C:\Users\Carlos\Desktop\El inge\7mo\SE\Practicas-SE\0002_Practica_2\22310273_Adquirir_Conocimiento\obj\Debug\net9.0\22310273_Adquirir_Conocimiento.sourcelink.json
+C:\Users\Carlos\Desktop\El inge\7mo\SE\Practicas-SE\0002_Practica_2\22310273_Adquirir_Conocimiento\obj\Debug\net9.0\22310273_Adquirir_Conocimiento.dll
+C:\Users\Carlos\Desktop\El inge\7mo\SE\Practicas-SE\0002_Practica_2\22310273_Adquirir_Conocimiento\obj\Debug\net9.0\refint\22310273_Adquirir_Conocimiento.dll
+C:\Users\Carlos\Desktop\El inge\7mo\SE\Practicas-SE\0002_Practica_2\22310273_Adquirir_Conocimiento\obj\Debug\net9.0\22310273_Adquirir_Conocimiento.pdb
+C:\Users\Carlos\Desktop\El inge\7mo\SE\Practicas-SE\0002_Practica_2\22310273_Adquirir_Conocimiento\obj\Debug\net9.0\22310273_Adquirir_Conocimiento.genruntimeconfig.cache
+C:\Users\Carlos\Desktop\El inge\7mo\SE\Practicas-SE\0002_Practica_2\22310273_Adquirir_Conocimiento\obj\Debug\net9.0\ref\22310273_Adquirir_Conocimiento.dll

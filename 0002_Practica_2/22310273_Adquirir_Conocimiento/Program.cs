@@ -17,7 +17,6 @@ class Chatbot
             string question = Console.ReadLine()?.Trim().ToLower();
 
             if (string.IsNullOrEmpty(question)) continue;
-            if (question == "salir") break;
 
             if (knowledgeBase.ContainsKey(question))
             {

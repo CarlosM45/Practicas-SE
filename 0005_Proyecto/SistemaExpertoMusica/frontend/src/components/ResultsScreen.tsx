@@ -52,23 +52,25 @@ export function ResultsScreen({ answers,recommendations, onRestart }: ResultsScr
           </p>
         </div>
 
-        <div className="flex items-center gap-3">
-          <ArrowUpDown className="w-5 h-5 text-gray-400" />
-          <span className="text-gray-300">Ordenar por:</span>
-          <Select value={sortOption} onValueChange={(value) => setSortOption(value as SortOption)}>
-            <SelectTrigger className="w-64 bg-gray-700 border-gray-600 text-gray-100">
-              <SelectValue />
-            </SelectTrigger>
-            <SelectContent className="bg-gray-700 border-gray-600">
-              <SelectItem value="title-asc" className="text-gray-100 focus:bg-gray-600">Título (A-Z)</SelectItem>
-              <SelectItem value="title-desc" className="text-gray-100 focus:bg-gray-600">Título (Z-A)</SelectItem>
-              <SelectItem value="artist-asc" className="text-gray-100 focus:bg-gray-600">Artista (A-Z)</SelectItem>
-              <SelectItem value="artist-desc" className="text-gray-100 focus:bg-gray-600">Artista (Z-A)</SelectItem>
-              <SelectItem value="popularity-asc" className="text-gray-100 focus:bg-gray-600">Popularidad (Menor a Mayor)</SelectItem>
-              <SelectItem value="popularity-desc" className="text-gray-100 focus:bg-gray-600">Popularidad (Mayor a Menor)</SelectItem>
-            </SelectContent>
-          </Select>
-        </div>
+        {recommendations.length > 0 && (
+          <div className="flex items-center gap-3">
+            <ArrowUpDown className="w-5 h-5 text-gray-400" />
+            <span className="text-gray-300">Ordenar por:</span>
+            <Select value={sortOption} onValueChange={(value) => setSortOption(value as SortOption)}>
+              <SelectTrigger className="w-64 bg-gray-700 border-gray-600 text-gray-100">
+                <SelectValue />
+              </SelectTrigger>
+              <SelectContent className="bg-gray-700 border-gray-600">
+                <SelectItem value="title-asc" className="text-gray-100 focus:bg-gray-600">Título (A-Z)</SelectItem>
+                <SelectItem value="title-desc" className="text-gray-100 focus:bg-gray-600">Título (Z-A)</SelectItem>
+                <SelectItem value="artist-asc" className="text-gray-100 focus:bg-gray-600">Artista (A-Z)</SelectItem>
+                <SelectItem value="artist-desc" className="text-gray-100 focus:bg-gray-600">Artista (Z-A)</SelectItem>
+                <SelectItem value="popularity-asc" className="text-gray-100 focus:bg-gray-600">Popularidad (Menor a Mayor)</SelectItem>
+                <SelectItem value="popularity-desc" className="text-gray-100 focus:bg-gray-600">Popularidad (Mayor a Menor)</SelectItem>
+              </SelectContent>
+            </Select>
+          </div>
+        )}
 
         <div className="space-y-3 max-h-96 overflow-y-auto pr-2">
           {sortedRecommendations.map((song, index) => (

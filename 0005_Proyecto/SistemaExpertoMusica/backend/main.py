@@ -23,7 +23,6 @@ class RespuestaUsuario(BaseModel):
 
 # --- CARGA DE DATOS ---
 try:
-    # Asegúrate de que el CSV tenga: title, artist, genre, valence, popularity, explicit
     df = pd.read_csv("dataset.csv")
 
     # Limpieza inicial: Convertir género a string y minúsculas para evitar errores
@@ -41,7 +40,7 @@ def aplicar_filtros(respuestas: List[RespuestaUsuario], dataframe):
 
     for r in respuestas:
 
-        # --- REGLA 1: ESTADO DE ÁNIMO (Valence) ---
+        # --- REGLA 1: ESTADO DE ÁNIMO (valence) ---
         # Lógica: 0.0 a 0.33 (Melancólico), 0.34 a 0.66 (Relajado), 0.67 a 1.0 (Feliz)
         if r.questionId == 1:
             if 'valence' in df_filtrado.columns:
@@ -61,7 +60,7 @@ def aplicar_filtros(respuestas: List[RespuestaUsuario], dataframe):
                 respuesta = r.answer
 
                 if "Hip-Hop" in respuesta:  # Cubre "Hip-Hop/Rap"
-                    # Busca tanto 'hip hop' como 'rap' usando Regex (| significa O)
+                    # Busca tanto 'hip hop' como 'rap' usando Regex
                     df_filtrado = df_filtrado[
                         df_filtrado['genre'].str.contains(
                             'hip hop|rap', case=False, regex=True)
@@ -107,7 +106,7 @@ def aplicar_filtros(respuestas: List[RespuestaUsuario], dataframe):
                     # El usuario NO quiere explicit -> Filtramos para dejar solo explicit=False
                     df_filtrado = df_filtrado[df_filtrado['explicit'] == False]
                 # Si la respuesta es "Sí", NO hacemos nada.
-                # (Dejamos pasar tanto True como False, que es lo que pediste).
+                # (Dejamos pasar tanto True como False)
 
     return df_filtrado
 

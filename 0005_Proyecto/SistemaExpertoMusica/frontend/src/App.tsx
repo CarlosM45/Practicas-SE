@@ -14,6 +14,13 @@ export type Question = {
   options: string[];
 };
 
+export interface Song {
+  title: string;
+  artist: string;
+  genre: string;
+  popularity: number;
+}
+
 const questions: Question[] = [
   {
     id: 1,
@@ -42,7 +49,7 @@ const questions: Question[] = [
   },
   {
     id: 4,
-    text: "¿Deseas ver recomendaciones con letra explícita?",
+    text: "¿Deseas ver recomendaciones con letra explícita? (palabras antisonantes)",
     options: ["Sí", "No"],
   },
 ];
@@ -55,13 +62,16 @@ export default function App() {
     useState(0);
   const [answers, setAnswers] = useState<Answer[]>([]);
 
+  const [recommendations, setRecommendations] = useState<Song[]>([]);
+
   const handleStart = () => {
     setScreen("questions");
     setCurrentQuestionIndex(0);
     setAnswers([]);
+    setRecommendations([]);
   };
 
-  const handleAnswer = (answer: string) => {
+  const handleAnswer = async (answer: string) => {
     const newAnswers = [
       ...answers,
       {
@@ -74,7 +84,26 @@ export default function App() {
     if (currentQuestionIndex < questions.length - 1) {
       setCurrentQuestionIndex(currentQuestionIndex + 1);
     } else {
-      setScreen("results");
+      try{
+        console.log("Enviando respuestas a Python...",newAnswers);
+        const response=await fetch("http://localhost:8000/recomendar",{
+          method:"POST",
+          headers:{
+            "Content-Type":"application/json",
+          },
+          body:JSON.stringify(newAnswers),
+        });
+        if (!response.ok){
+          throw new Error("Error en la respuesta del servidor");
+        }
+        const data=await response.json();
+        console.log("Recomendaciones recibidas:",data);
+        setRecommendations(data);
+        setScreen("results");
+      }catch(error){
+        console.error("Error conectando con el backend:",error);
+        alert("Hubo un error conectando con el sistema experto. Revisa que la consola esté abierta");
+      }
     }
   };
 
@@ -89,6 +118,7 @@ export default function App() {
     setScreen("welcome");
     setCurrentQuestionIndex(0);
     setAnswers([]);
+    setRecommendations([]);
   };
 
   return (
@@ -110,6 +140,7 @@ export default function App() {
       {screen === "results" && (
         <ResultsScreen
           answers={answers}
+          recommendations={recommendations}
           onRestart={handleRestart}
         />
       )}

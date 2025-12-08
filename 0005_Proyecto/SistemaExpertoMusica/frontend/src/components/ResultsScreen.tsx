@@ -3,45 +3,18 @@ import { Button } from './ui/button';
 import { Card } from './ui/card';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from './ui/select';
 import { ArrowUpDown, Music, Home } from 'lucide-react';
-import type { Answer } from '../App';
-
-type Song = {
-  id: number;
-  title: string;
-  artist: string;
-  popularity: number;
-  genre: string;
-};
+import type { Answer,Song } from '../App';
 
 type SortOption = 'title-asc' | 'title-desc' | 'artist-asc' | 'artist-desc' | 'popularity-asc' | 'popularity-desc';
 
 type ResultsScreenProps = {
   answers: Answer[];
+  recommendations: Song[];
   onRestart: () => void;
 };
 
-const generateRecommendations = (answers: Answer[]): Song[] => {
-  const songs: Song[] = [
-    { id: 1, title: 'Blinding Lights', artist: 'The Weeknd', popularity: 98, genre: 'Pop' },
-    { id: 2, title: 'Shape of You', artist: 'Ed Sheeran', popularity: 95, genre: 'Pop' },
-    { id: 3, title: 'Bohemian Rhapsody', artist: 'Queen', popularity: 92, genre: 'Rock' },
-    { id: 4, title: 'Stairway to Heaven', artist: 'Led Zeppelin', popularity: 88, genre: 'Rock' },
-    { id: 5, title: 'God\'s Plan', artist: 'Drake', popularity: 94, genre: 'Hip-Hop' },
-    { id: 6, title: 'HUMBLE.', artist: 'Kendrick Lamar', popularity: 90, genre: 'Hip-Hop' },
-    { id: 7, title: 'One More Time', artist: 'Daft Punk', popularity: 87, genre: 'Electrónica' },
-    { id: 8, title: 'Midnight City', artist: 'M83', popularity: 85, genre: 'Electrónica' },
-    { id: 9, title: 'Take Five', artist: 'Dave Brubeck', popularity: 82, genre: 'Jazz' },
-    { id: 10, title: 'So What', artist: 'Miles Davis', popularity: 80, genre: 'Jazz' },
-    { id: 11, title: 'Levitating', artist: 'Dua Lipa', popularity: 96, genre: 'Pop' },
-    { id: 12, title: 'Someone Like You', artist: 'Adele', popularity: 93, genre: 'Pop' },
-  ];
-
-  return songs.slice(0, 8);
-};
-
-export function ResultsScreen({ answers, onRestart }: ResultsScreenProps) {
+export function ResultsScreen({ answers,recommendations, onRestart }: ResultsScreenProps) {
   const [sortOption, setSortOption] = useState<SortOption>('popularity-desc');
-  const recommendations = useMemo(() => generateRecommendations(answers), [answers]);
 
   const sortedRecommendations = useMemo(() => {
     const sorted = [...recommendations];
@@ -100,7 +73,7 @@ export function ResultsScreen({ answers, onRestart }: ResultsScreenProps) {
         <div className="space-y-3 max-h-96 overflow-y-auto pr-2">
           {sortedRecommendations.map((song, index) => (
             <div
-              key={song.id}
+              key={index}
               className="flex items-center gap-4 p-4 bg-gray-700 border border-gray-600 rounded-lg hover:shadow-md hover:bg-gray-650 transition-all"
             >
               <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-purple-400 to-blue-400 rounded-full flex items-center justify-center">
